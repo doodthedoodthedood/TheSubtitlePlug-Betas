@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src='https://www.googletagmanager.com/gtag/js?id=G-XM1EE4KMQ1'></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XM1EE4KMQ1');
+</script>
+    <link rel="stylesheet" href="../style.css">
+    <title>ThePixelPlus</title>
+</head>
+<body>
+    <h1 class="center">Subtitle Placement Beta</h1>
+   <div id="video-demo-container">
+	<button id="upload-button">Select MP4 Video</button> 
+	<input type="file" id="file-to-upload" accept="video/mp4" />
+	<video id="main-video" controls>
+		<source type="video/mp4">
+	</video>
+	<canvas id="video-canvas"></canvas>
+	<div id="thumbnail-container">
+		 Seek to <select id="set-video-seconds"></select> seconds <a id="get-thumbnail" href="#">Download Thumbnail</a>
+	</div>
+</div>
+    <div id="thumbEditor" style="display: none;" class="center">
+        <div id="inThumb">
+            <img id="thumbnail" class="center"/>
+            <p id="example">Example</p>
+        </div><input type="range" min="0" max="100000" value="0" class="positionsliders center" id="height" oninput = 'subHeight()' style="display: inline;">
+        <input type="range" min="0" max="100000" value="0" class="positionsliders center" id="width" oninput = 'subWidth()'>
+        <input type="button" value="Center" onClick="center();">
+    </div>
+
+</body>
+<script src="thumbnail.js"></script>
